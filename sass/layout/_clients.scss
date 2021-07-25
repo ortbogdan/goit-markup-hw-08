@@ -2,7 +2,7 @@
   margin-bottom: 50px;
 }
 .clients-list {
-  display: flex;
+  // display: flex;
 
   &__item:not(:first-child) {
     margin-left: var(--page-gap);

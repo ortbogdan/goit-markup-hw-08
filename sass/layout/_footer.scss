@@ -3,10 +3,10 @@
   padding-bottom: 60px;
   background-color: var(--page-bgcolor);
 
-  &__box {
-    display: flex;
-    align-items: baseline;
-  }
+  // &__box {
+  //   display: flex;
+  //   align-items: baseline;
+  // }
   &__subscr {
     margin-left: auto;
   }
@@ -15,8 +15,8 @@
   }
 }
 .address-box {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
 
   &__logo {
     margin-bottom: 20px;

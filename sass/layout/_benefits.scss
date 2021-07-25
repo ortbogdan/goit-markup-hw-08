@@ -1,14 +1,19 @@
-.benefits-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: -30px;
-  margin-left: -30px;
+.benefits {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 
-  &__item {
-    flex-basis: calc(100% / 4 - var(--page-gap));
-    margin-top: var(--page-gap);
-    margin-left: var(--page-gap);
-  }
+.benefits-list {
+  // display: flex;
+  // flex-wrap: wrap;
+  // margin-top: -30px;
+  // margin-left: -30px;
+
+  // &__item {
+  //   flex-basis: calc(100% / 4 - var(--page-gap));
+  //   margin-top: var(--page-gap);
+  //   margin-left: var(--page-gap);
+  // }
   &__icon {
     display: flex;
     justify-content: center;
@@ -26,6 +31,7 @@
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
-    text-align: left;
+    // text-align: left;
+    text-align: center;
   }
 }
