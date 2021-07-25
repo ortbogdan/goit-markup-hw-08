@@ -1,0 +1,41 @@
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--page-bgcolor);
+
+  &__box {
+    display: flex;
+    align-items: baseline;
+  }
+  &__subscr {
+    margin-left: auto;
+  }
+  &__social-links {
+    margin-left: 70px;
+  }
+}
+.address-box {
+  display: flex;
+  flex-direction: column;
+
+  &__logo {
+    margin-bottom: 20px;
+    padding: 0 0;
+  }
+}
+.subscr-box__title {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: var(--page-color-first);
+}
+.links-box__title {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: var(--page-color-first);
+}

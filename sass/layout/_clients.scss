@@ -1,0 +1,30 @@
+.clients__title {
+  margin-bottom: 50px;
+}
+.clients-list {
+  display: flex;
+
+  &__item:not(:first-child) {
+    margin-left: var(--page-gap);
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 170px;
+    height: 92px;
+    border: 1px solid rgb(175, 177, 184);
+    border-radius: 4px;
+    fill: rgb(175, 177, 184);
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      fill: var(--page-color-second);
+      border-color: var(--page-color-second);
+    }
+  }
+}

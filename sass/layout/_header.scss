@@ -1,0 +1,17 @@
+.page-header {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  border-bottom: 1px solid rgb(236, 236, 236);
+
+  &__box {
+    display: flex;
+    align-items: center;
+  }
+  &__nav {
+    margin-left: 93px;
+  }
+  &__contacts {
+    margin-left: auto;
+  }
+}
