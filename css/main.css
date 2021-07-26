@@ -45,8 +45,8 @@
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .container {
@@ -95,7 +95,7 @@
 
 .title {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
   color: #212121;
@@ -211,12 +211,7 @@
   color: var(--page-color-second);
 }
 
-.email-form {
-  display: flex;
-}
-
 .email-form__cell {
-  width: 358px;
   height: 50px;
   border-radius: 4px;
   padding: 15px 16px 15px 16px;
@@ -576,18 +571,16 @@
   margin-bottom: var(--page-gap);
 }
 
-.benefits {
-  padding-top: 60px;
-  padding-bottom: 60px;
+.benefits-list__item:not(:last-child) {
+  margin-bottom: var(--page-gap);
 }
 
 .benefits-list__icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 270px;
   height: 120px;
-  margin-bottom: 30px;
+  margin-bottom: var(--page-gap);
   background-color: #f5f4fa;
   border-radius: 4px;
 }
@@ -601,6 +594,7 @@
 }
 
 .workshop {
+  display: none;
   padding-top: 0;
 }
 
@@ -641,20 +635,14 @@
 }
 
 .team__title {
-  margin-bottom: 50px;
+  margin-bottom: var(--page-gap);
 }
 
-.team__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: -30px;
-  margin-left: -30px;
+.team__item:not(:last-child) {
+  margin-bottom: var(--page-gap);
 }
 
 .team__item {
-  flex-basis: calc(100% / 4 - var(--page-gap));
-  margin-top: var(--page-gap);
-  margin-left: var(--page-gap);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   font-size: 16px;
@@ -681,19 +669,41 @@
 }
 
 .clients__title {
-  margin-bottom: 50px;
+  margin-bottom: var(--page-gap);
 }
 
-.clients-list__item:not(:first-child) {
-  margin-left: var(--page-gap);
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.clients-list__item {
+  margin-left: 30px;
+  margin-top: 30px;
+  width: 100%;
+  height: 90px;
+  flex-basis: calc((100% - 60px) / 2);
+}
+
+@media screen and (min-width: 768px) {
+  .clients-list__item {
+    flex-basis: calc((100% - 90px) / 3);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .clients-list__item {
+    flex-basis: calc((100% - 180px) / 6);
+  }
 }
 
 .clients-list__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
-  height: 92px;
+  height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   fill: #afb1b8;
