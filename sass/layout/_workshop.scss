@@ -1,6 +1,9 @@
 .workshop {
   display: none;
   padding-top: 0;
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
 
   &__title {
     margin-bottom: 50px;
