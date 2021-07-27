@@ -4,17 +4,20 @@
 
   border-bottom: 1px solid rgb(236, 236, 236);
 
-  // &__box {
-  //   display: flex;
-  //   align-items: center;
-  // }
-  // &__nav {
-  //   margin-left: 93px;
-  // }
-  // &__contacts {
-  //   margin-left: auto;
-  // }
+  &__box {
+    display: flex;
+
+    align-items: center;
+  }
+  &__nav {
+    display: none;
+    margin-left: 93px;
+  }
+  &__contacts {
+    display: none;
+    margin-left: auto;
+  }
 }
-.page-header__menu {
-  display: none;
-}
+// .page-header__menu {
+//   display: none;
+// }
