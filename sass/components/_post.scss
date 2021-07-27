@@ -1,9 +1,13 @@
 .post {
   font-style: normal;
 
-  &__item:not(:last-child) {
-    margin-bottom: 9px;
+  &__item {
+    margin-bottom: 8px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
+
   &__office {
     text-decoration: none;
 

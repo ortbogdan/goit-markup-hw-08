@@ -83,6 +83,7 @@
 }
 
 .logo {
+  display: inline-block;
   padding: 24px 0 25px 0px;
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
@@ -102,11 +103,19 @@
 }
 
 .title {
+  margin-bottom: var(--page-gap);
   font-weight: 700;
   font-size: 28px;
   line-height: 1.17;
   text-align: center;
   color: #212121;
+}
+
+@media screen and (min-width: 1200px) {
+  .title {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
 }
 
 .page-button {
@@ -199,8 +208,12 @@
   font-style: normal;
 }
 
-.post__item:not(:last-child) {
-  margin-bottom: 9px;
+.post__item {
+  margin-bottom: 8px;
+}
+
+.post__item:last-child {
+  margin-bottom: 0;
 }
 
 .post__office {
@@ -219,8 +232,16 @@
   color: var(--page-color-second);
 }
 
+.email-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .email-form__cell {
+  width: 100%;
   height: 50px;
+  margin-bottom: 20px;
   border-radius: 4px;
   padding: 15px 16px 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -265,8 +286,23 @@
   justify-content: center;
 }
 
-.email-form__button--end {
-  margin-left: 12px;
+@media screen and (min-width: 768px) {
+  .email-form__cell {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .email-form {
+    flex-direction: row;
+  }
+  .email-form__button--end {
+    margin-left: 12px;
+  }
+  .email-form__cell {
+    margin-bottom: 0;
+    width: 358px;
+  }
 }
 
 .social-list {
@@ -521,17 +557,26 @@
 }
 
 .page-footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
   background-color: var(--page-bgcolor);
 }
 
-.page-footer__subscr {
-  margin-left: auto;
+.page-footer__title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--page-color-first);
+}
+
+.page-footer__box {
+  text-align: center;
 }
 
 .page-footer__social-links {
-  margin-left: 70px;
+  margin-bottom: 60px;
+}
+
+.address-box {
+  margin-bottom: 60px;
 }
 
 .address-box__logo {
@@ -539,18 +584,30 @@
   padding: 0 0;
 }
 
-.subscr-box__title {
-  margin-bottom: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--page-color-first);
+@media screen and (min-width: 768px) {
+  .page-footer__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
 
-.links-box__title {
-  margin-bottom: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--page-color-first);
+@media screen and (min-width: 1200px) {
+  .page-footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .page-footer__social-links {
+    margin-bottom: 0;
+  }
+  .page-footer__box {
+    justify-content: space-between;
+    align-items: baseline;
+    text-align: left;
+  }
+  .address-box {
+    margin-bottom: 0;
+  }
 }
 
 .hero {
@@ -588,6 +645,7 @@
 @media screen and (min-width: 1200px) {
   .hero__title {
     font-size: 44px;
+    line-height: 1.36;
   }
 }
 
@@ -698,21 +756,43 @@
   background-color: #f5f4fa;
 }
 
-.team__title {
-  margin-bottom: var(--page-gap);
+.team__list {
+  margin-bottom: -30px;
 }
 
-.team__item:not(:last-child) {
-  margin-bottom: var(--page-gap);
+@media screen and (min-width: 768px) {
+  .team__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+    margin-bottom: 0;
+  }
 }
 
 .team__item {
+  margin-bottom: var(--page-gap);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   background-color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .team__item {
+    flex-basis: calc((100% - 60px) / 2);
+    margin-top: var(--page-gap);
+    margin-left: var(--page-gap);
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__item {
+    flex-basis: calc(100% / 4 - var(--page-gap));
+  }
 }
 
 .team__box {
@@ -730,10 +810,6 @@
 
 .team__desc {
   margin-bottom: 16px;
-}
-
-.clients__title {
-  margin-bottom: var(--page-gap);
 }
 
 .clients-list {
@@ -757,7 +833,7 @@
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .clients-list__item {
     flex-basis: calc((100% - 180px) / 6);
   }

@@ -1,10 +1,12 @@
 .email-form {
-  // display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &__cell {
-    // width: 358px;
+    width: 100%;
     height: 50px;
-
+    margin-bottom: 20px;
     border-radius: 4px;
 
     padding: 15px 16px 15px 16px;
@@ -48,7 +50,21 @@
     align-items: center;
     justify-content: center;
   }
-  &__button--end {
-    margin-left: 12px;
+}
+@media screen and (min-width: 768px) {
+  .email-form__cell {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .email-form {
+    flex-direction: row;
+    &__button--end {
+      margin-left: 12px;
+    }
+  }
+  .email-form__cell {
+    margin-bottom: 0;
+    width: 358px;
   }
 }
