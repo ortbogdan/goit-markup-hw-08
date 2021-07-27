@@ -232,6 +232,12 @@
   color: var(--page-color-second);
 }
 
+@media screen and (min-width: 1200px) {
+  .post__item {
+    margin-bottom: 8px;
+  }
+}
+
 .email-form {
   display: flex;
   flex-direction: column;
