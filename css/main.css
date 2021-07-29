@@ -40,8 +40,7 @@
 
 .pics-style {
   display: block;
-  width: 100%;
-  height: auto;
+  max-width: 100%;
 }
 
 .section {
@@ -1074,7 +1073,13 @@
 
 .team__box {
   padding-top: var(--page-gap);
-  padding-bottom: var(--page-gap);
+  padding-bottom: 24px;
+}
+
+@media screen and (min-width: 1200px) {
+  .team__box {
+    padding-bottom: var(--page-gap);
+  }
 }
 
 .team__name {

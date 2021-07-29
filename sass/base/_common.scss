@@ -20,8 +20,8 @@
 }
 .pics-style {
   display: block;
-  width: 100%;
-  height: auto;
+  max-width: 100%;
+  // height: auto;
 }
 .section {
   padding-top: 60px;
