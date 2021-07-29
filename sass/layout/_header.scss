@@ -17,6 +17,9 @@
     display: none;
     margin-left: auto;
   }
+  &__mobile-bt {
+    margin-left: auto;
+  }
 }
 
 @media screen and (min-width: 768px) {

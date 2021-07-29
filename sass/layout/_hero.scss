@@ -1,27 +1,39 @@
 .hero {
-  // padding-top: 200px;
-  // padding-bottom: 200px;
-
   padding-top: 118px;
   padding-bottom: 118px;
+
+  // max-height: 400px;
+  max-width: 768px;
   // height: 600px;
-  max-width: 1600px;
+  // max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
 
   text-align: center;
 
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../image/hero-bg.jpg);
+    url(../image/hero-bg-mb.jpg);
   background-color: var(--page-bgcolor);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 
+  @media screen and (min-width: 768px) {
+    max-width: 1200px;
+
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../image/hero-bg-tb.jpg);
+  }
+
   @media screen and (min-width: 1200px) {
     padding-top: 200px;
     padding-bottom: 200px;
+    max-width: 1600px;
+
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../image/hero-bg.jpg);
   }
+
   &__title {
     width: 100%;
     font-weight: 900;
@@ -40,5 +52,29 @@
     &--in-bottom {
       margin-bottom: var(--page-gap);
     }
+  }
+}
+@media (min-device-pixel-ratio: 2) and (max-width: 767px),
+  (min-resolution: 192dpi) and (max-width: 767px),
+  (min-resolution: 2dppx) and (max-width: 767px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../image/hero-bg-mb@2x.jpg);
+  }
+}
+@media (min-device-pixel-ratio: 2) and (min-width: 768px),
+  (min-resolution: 192dpi) and (min-width: 768px),
+  (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../image/hero-bg-tb@2x.jpg);
+  }
+}
+@media (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  (min-resolution: 192dpi) and (min-width: 1200px),
+  (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../image/hero-bg@2x.jpg);
   }
 }

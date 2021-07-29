@@ -573,7 +573,6 @@
   align-items: center;
   justify-content: center;
   height: 40px;
-  margin-left: auto;
   padding: 0 0;
   border: none;
   background-color: transparent;
@@ -611,11 +610,12 @@
 
 .mobile-menu__close-bt {
   position: absolute;
+  top: 10px;
+  right: 15px;
+  z-index: 99;
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 10px;
-  right: 15px;
   width: 40px;
   height: 40px;
   padding: 0;
@@ -769,6 +769,10 @@
   margin-left: auto;
 }
 
+.page-header__mobile-bt {
+  margin-left: auto;
+}
+
 @media screen and (min-width: 768px) {
   .burger-bt {
     display: none;
@@ -859,21 +863,30 @@
 .hero {
   padding-top: 118px;
   padding-bottom: 118px;
-  max-width: 1600px;
+  max-width: 768px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/hero-bg.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/hero-bg-mb.jpg);
   background-color: var(--page-bgcolor);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 }
 
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 1200px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/hero-bg-tb.jpg);
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
+    max-width: 1600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/hero-bg.jpg);
   }
 }
 
@@ -897,6 +910,24 @@
 
 .hero__title--in-bottom {
   margin-bottom: var(--page-gap);
+}
+
+@media (min-device-pixel-ratio: 2) and (max-width: 767px), (min-resolution: 192dpi) and (max-width: 767px), (min-resolution: 2dppx) and (max-width: 767px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/hero-bg-mb@2x.jpg);
+  }
+}
+
+@media (min-device-pixel-ratio: 2) and (min-width: 768px), (min-resolution: 192dpi) and (min-width: 768px), (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/hero-bg-tb@2x.jpg);
+  }
+}
+
+@media (min-device-pixel-ratio: 2) and (min-width: 1200px), (min-resolution: 192dpi) and (min-width: 1200px), (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/hero-bg@2x.jpg);
+  }
 }
 
 .benefits-list {
