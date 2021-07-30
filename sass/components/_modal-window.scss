@@ -3,9 +3,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
+  overflow: scroll;
 
-  // padding: 40px 40px 40px 40px;
-  // width: 450px;
   padding: 40px 20px 40px 20px;
   width: 300px;
   max-width: 100%;
