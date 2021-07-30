@@ -170,6 +170,10 @@
     line-height: 1.17;
   }
 }
-.modal-form__wrap:hover .modal-form__name {
-  color: var(--page-color-second);
-}
+
+// .modal-form__wrap {
+//   &:hover + .modal-form__name,
+//   &:focus + .modal-form__name {
+//     color: lightcoral;
+//   }
+// }

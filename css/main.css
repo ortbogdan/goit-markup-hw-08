@@ -614,10 +614,6 @@
   }
 }
 
-.modal-form__wrap:hover .modal-form__name {
-  color: var(--page-color-second);
-}
-
 .burger-bt {
   display: flex;
   align-items: center;
