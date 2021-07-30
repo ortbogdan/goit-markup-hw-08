@@ -23,6 +23,7 @@
     <header class="section page-header">
       <div class="container page-header__box">
         <a class="logo" href="./" lang="en">Web<span class="logo__text">Studio</span></a>
+
         <nav class="nav page-header__nav">
           <ul class="nav__list lists-style">
             <li class="nav__item">
@@ -54,6 +55,76 @@
             >
           </li>
         </ul>
+        <button
+          class="js-open-menu burger-bt page-header__mobile-bt"
+          type="button"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          aria-label="Открыть мобильное меню"
+        >
+          <svg width="40" height="40">
+            <use href="./image/icons.svg#burger-bt"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <div class="mobile-menu">
+          <button type="button" class="js-close-menu mobile-menu__close-bt">
+            <svg
+              class="mobile-menu__close-icon"
+              width="40"
+              height="40"
+              aria-label="Закрыть мобильное меню"
+            >
+              <use href="./image/icons.svg#mobile-menu-close"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu__nav mobile-navigation lists-style">
+            <li class="mobile-navigation__item">
+              <a class="mobile-navigation__link" href="./index.html">Студия</a>
+            </li>
+            <li class="mobile-navigation__item">
+              <a
+                class="mobile-navigation__link mobile-navigation__link--active"
+                href="./portfolio.html"
+                >Портфолио</a
+              >
+            </li>
+            <li class="mobile-navigation__item">
+              <a class="mobile-navigation__link" href="">Контакты</a>
+            </li>
+          </ul>
+          <div class="mobile-menu__box">
+            <a class="mobile-menu__tel-link" href="tel:+380961111111">+38 096 111 11 11</a>
+
+            <a class="mobile-menu__email-link" href="mailto:info@devstudio.com" lang="en"
+              >info@devstudio.com</a
+            >
+
+            <ul class="lists-style mobile-menu__social-list mobile-soc-list">
+              <li class="mobile-soc-list__item">
+                <a class="mobile-soc-list__link" href="" target="_blank" rel="noopener noreferrer"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mobile-soc-list__item">
+                <a class="mobile-soc-list__link" href="" target="_blank" rel="noopener noreferrer"
+                  >Twitter</a
+                >
+              </li>
+              <li class="mobile-soc-list__item">
+                <a class="mobile-soc-list__link" href="" target="_blank" rel="noopener noreferrer"
+                  >Facebook</a
+                >
+              </li>
+              <li class="mobile-soc-list__item">
+                <a class="mobile-soc-list__link" href="" target="_blank" rel="noopener noreferrer"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -83,13 +154,58 @@
             <li class="portfolio__item">
               <a class="portfolio-link" href="">
                 <div class="portfolio-link__thumb">
-                  <img
-                    class="pics-style"
-                    src="./image/portfolio/portfolio1.jpg"
-                    alt="Страница сайта Технокряк з иконками людей на ноутбуке"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                      srcset="
+                        ./image/portfolio/portfolio1-dt.webp    1x,
+                        ./image/portfolio/portfolio1-dt@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio1-dt.jpg    1x,
+                        ./image/portfolio/portfolio1-dt@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio1-tb.webp    1x,
+                        ./image/portfolio/portfolio1-tb@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio1-tb.jpg    1x,
+                        ./image/portfolio/portfolio1-tb@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="
+                        ./image/portfolio/portfolio1-mb.webp    1x,
+                        ./image/portfolio/portfolio1-mb@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="
+                        ./image/portfolio/portfolio1-mb.jpg    1x,
+                        ./image/portfolio/portfolio1-mb@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="pics-style"
+                      src="./image/portfolio/portfolio1-mb.jpg"
+                      alt="Страница сайта Технокряк з иконками людей на ноутбуке"
+                    />
+                  </picture>
                   <div class="portfolio-link__overlay">
                     <p class="text-style">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -107,13 +223,51 @@
             <li class="portfolio__item">
               <a class="portfolio-link" href="">
                 <div class="portfolio-link__thumb">
-                  <img
-                    class="pics-style"
-                    src="./image/portfolio/portfolio2.jpg"
-                    alt="Два баскетболиста в прыжке с мячом"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                      srcset="
+                        ./image/portfolio/portfolio2-dt.webp    1x,
+                        ./image/portfolio/portfolio2-dt@2x.webp 2x
+                      " />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio2-dt.jpg    1x,
+                        ./image/portfolio/portfolio2-dt@2x.jpg 2x
+                      " />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio2-tb.webp    1x,
+                        ./image/portfolio/portfolio2-tb@2x.webp 2x
+                      "
+                      type="image/webp" />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio2-tb.jpg    1x,
+                        ./image/portfolio/portfolio2-tb@2x.jpg 2x
+                      " />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="
+                        ./image/portfolio/portfolio2-mb.webp    1x,
+                        ./image/portfolio/portfolio2-mb@2x.webp 2x
+                      "
+                      type="image/webp" />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="
+                        ./image/portfolio/portfolio2-mb.jpg    1x,
+                        ./image/portfolio/portfolio2-mb@2x.jpg 2x
+                      " />
+                    <img
+                      class="pics-style"
+                      src="./image/portfolio/portfolio2-mb.jpg"
+                      alt="Два баскетболиста в прыжке с мячом"
+                  /></picture>
                   <div class="portfolio-link__overlay">
                     <p class="text-style">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -133,13 +287,51 @@
             <li class="portfolio__item">
               <a class="portfolio-link" href="">
                 <div class="portfolio-link__thumb">
-                  <img
-                    class="pics-style"
-                    src="./image/portfolio/portfolio3.jpg"
-                    alt="Логотип ресторана"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                      srcset="
+                        ./image/portfolio/portfolio3-dt.webp    1x,
+                        ./image/portfolio/portfolio3-dt@2x.webp 2x
+                      " />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio3-dt.jpg    1x,
+                        ./image/portfolio/portfolio3-dt@2x.jpg 2x
+                      " />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio3-tb.webp    1x,
+                        ./image/portfolio/portfolio3-tb@2x.webp 2x
+                      "
+                      type="image/webp" />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio3-tb.jpg    1x,
+                        ./image/portfolio/portfolio3-tb@2x.jpg 2x
+                      " />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="
+                        ./image/portfolio/portfolio3-mb.webp    1x,
+                        ./image/portfolio/portfolio3-mb@2x.webp 2x
+                      "
+                      type="image/webp" />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="
+                        ./image/portfolio/portfolio3-mb.jpg    1x,
+                        ./image/portfolio/portfolio3-mb@2x.jpg 2x
+                      " />
+                    <img
+                      class="pics-style"
+                      src="./image/portfolio/portfolio3-mb.jpg"
+                      alt="Логотип ресторана"
+                  /></picture>
                   <div class="portfolio-link__overlay">
                     <p class="text-style">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -161,13 +353,51 @@
             <li class="portfolio__item">
               <a class="portfolio-link" href="">
                 <div class="portfolio-link__thumb">
-                  <img
-                    class="pics-style"
-                    src="./image/portfolio/portfolio4.jpg"
-                    alt="Черные большые наушники"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                      srcset="
+                        ./image/portfolio/portfolio4-dt.webp    1x,
+                        ./image/portfolio/portfolio4-dt@2x.webp 2x
+                      " />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio4-dt.jpg    1x,
+                        ./image/portfolio/portfolio4-dt@2x.jpg 2x
+                      " />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio4-tb.webp    1x,
+                        ./image/portfolio/portfolio4-tb@2x.webp 2x
+                      "
+                      type="image/webp" />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio4-tb.jpg    1x,
+                        ./image/portfolio/portfolio4-tb@2x.jpg 2x
+                      " />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="
+                        ./image/portfolio/portfolio4-mb.webp    1x,
+                        ./image/portfolio/portfolio4-mb@2x.webp 2x
+                      "
+                      type="image/webp" />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="
+                        ./image/portfolio/portfolio4-mb.jpg    1x,
+                        ./image/portfolio/portfolio4-mb@2x.jpg 2x
+                      " />
+                    <img
+                      class="pics-style"
+                      src="./image/portfolio/portfolio4-mb.jpg"
+                      alt="Черные большые наушники"
+                  /></picture>
                   <div class="portfolio-link__overlay">
                     <p class="text-style">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -187,13 +417,58 @@
             <li class="portfolio__item">
               <a class="portfolio-link" href="">
                 <div class="portfolio-link__thumb">
-                  <img
-                    class="pics-style"
-                    src="./image/portfolio/portfolio5.jpg"
-                    alt="Две картонные коробки"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                      srcset="
+                        ./image/portfolio/portfolio5-dt.webp    1x,
+                        ./image/portfolio/portfolio5-dt@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio5-dt.jpg    1x,
+                        ./image/portfolio/portfolio5-dt@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio5-tb.webp    1x,
+                        ./image/portfolio/portfolio5-tb@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio5-tb.jpg    1x,
+                        ./image/portfolio/portfolio5-tb@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="
+                        ./image/portfolio/portfolio5-mb.webp    1x,
+                        ./image/portfolio/portfolio5-mb@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="
+                        ./image/portfolio/portfolio5-mb.jpg    1x,
+                        ./image/portfolio/portfolio5-mb@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="pics-style"
+                      src="./image/portfolio/portfolio5-mb.jpg"
+                      alt="Две картонные коробки"
+                    />
+                  </picture>
                   <div class="portfolio-link__overlay">
                     <p class="text-style">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -215,13 +490,51 @@
             <li class="portfolio__item">
               <a class="portfolio-link" href="">
                 <div class="portfolio-link__thumb">
-                  <img
-                    class="pics-style"
-                    src="./image/portfolio/portfolio6.jpg"
-                    alt="Чорный монитор з открытой страницей сайта"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                      srcset="
+                        ./image/portfolio/portfolio6-dt.webp    1x,
+                        ./image/portfolio/portfolio6-dt@2x.webp 2x
+                      " />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio6-dt.jpg    1x,
+                        ./image/portfolio/portfolio6-dt@2x.jpg 2x
+                      " />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio6-tb.webp    1x,
+                        ./image/portfolio/portfolio6-tb@2x.webp 2x
+                      "
+                      type="image/webp" />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio6-tb.jpg    1x,
+                        ./image/portfolio/portfolio6-tb@2x.jpg 2x
+                      " />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="
+                        ./image/portfolio/portfolio6-mb.webp    1x,
+                        ./image/portfolio/portfolio6-mb@2x.webp 2x
+                      "
+                      type="image/webp" />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="
+                        ./image/portfolio/portfolio6-mb.jpg    1x,
+                        ./image/portfolio/portfolio6-mb@2x.jpg 2x
+                      " />
+                    <img
+                      class="pics-style"
+                      src="./image/portfolio/portfolio6-mb.jpg"
+                      alt="Чорный монитор з открытой страницей сайта"
+                  /></picture>
                   <div class="portfolio-link__overlay">
                     <p class="text-style">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -241,13 +554,51 @@
             <li class="portfolio__item">
               <a class="portfolio-link" href="">
                 <div class="portfolio-link__thumb">
-                  <img
-                    class="pics-style"
-                    src="./image/portfolio/portfolio7.jpg"
-                    alt="Открытая книга з рисунками"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                      srcset="
+                        ./image/portfolio/portfolio7-dt.webp    1x,
+                        ./image/portfolio/portfolio7-dt@2x.webp 2x
+                      " />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio7-dt.jpg    1x,
+                        ./image/portfolio/portfolio7-dt@2x.jpg 2x
+                      " />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio7-tb.webp    1x,
+                        ./image/portfolio/portfolio7-tb@2x.webp 2x
+                      "
+                      type="image/webp" />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio7-tb.jpg    1x,
+                        ./image/portfolio/portfolio7-tb@2x.jpg 2x
+                      " />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="
+                        ./image/portfolio/portfolio7-mb.webp    1x,
+                        ./image/portfolio/portfolio7-mb@2x.webp 2x
+                      "
+                      type="image/webp" />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="
+                        ./image/portfolio/portfolio7-mb.jpg    1x,
+                        ./image/portfolio/portfolio7-mb@2x.jpg 2x
+                      " />
+                    <img
+                      class="pics-style"
+                      src="./image/portfolio/portfolio7-mb.jpg"
+                      alt="Открытая книга з рисунками"
+                  /></picture>
                   <div class="portfolio-link__overlay">
                     <p class="text-style">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -267,13 +618,51 @@
             <li class="portfolio__item">
               <a class="portfolio-link" href="">
                 <div class="portfolio-link__thumb">
-                  <img
-                    class="pics-style"
-                    src="./image/portfolio/portfolio9.jpg"
-                    alt="Бумажная лейба на веревке з названием"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                      srcset="
+                        ./image/portfolio/portfolio8-dt.webp    1x,
+                        ./image/portfolio/portfolio8-dt@2x.webp 2x
+                      " />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio8-dt.jpg    1x,
+                        ./image/portfolio/portfolio8-dt@2x.jpg 2x
+                      " />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio8-tb.webp    1x,
+                        ./image/portfolio/portfolio8-tb@2x.webp 2x
+                      "
+                      type="image/webp" />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio8-tb.jpg    1x,
+                        ./image/portfolio/portfolio8-tb@2x.jpg 2x
+                      " />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="
+                        ./image/portfolio/portfolio8-mb.webp    1x,
+                        ./image/portfolio/portfolio8-mb@2x.webp 2x
+                      "
+                      type="image/webp" />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="
+                        ./image/portfolio/portfolio8-mb.jpg    1x,
+                        ./image/portfolio/portfolio8-mb@2x.jpg 2x
+                      " />
+                    <img
+                      class="pics-style"
+                      src="./image/portfolio/portfolio8-mb.jpg"
+                      alt="Бумажная лейба на веревке з названием"
+                  /></picture>
                   <div class="portfolio-link__overlay">
                     <p class="text-style">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -293,13 +682,51 @@
             <li class="portfolio__item">
               <a class="portfolio-link" href="">
                 <div class="portfolio-link__thumb">
-                  <img
-                    class="pics-style"
-                    src="./image/portfolio/portfolio8.jpg"
-                    alt="Ноутбук з открытим приложением"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                      srcset="
+                        ./image/portfolio/portfolio9-dt.webp    1x,
+                        ./image/portfolio/portfolio9-dt@2x.webp 2x
+                      " />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./image/portfolio/portfolio9-dt.jpg    1x,
+                        ./image/portfolio/portfolio9-dt@2x.jpg 2x
+                      " />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio9-tb.webp    1x,
+                        ./image/portfolio/portfolio9-tb@2x.webp 2x
+                      "
+                      type="image/webp" />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./image/portfolio/portfolio9-tb.jpg    1x,
+                        ./image/portfolio/portfolio9-tb@2x.jpg 2x
+                      " />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="
+                        ./image/portfolio/portfolio9-mb.webp    1x,
+                        ./image/portfolio/portfolio9-mb@2x.webp 2x
+                      "
+                      type="image/webp" />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="
+                        ./image/portfolio/portfolio9-mb.jpg    1x,
+                        ./image/portfolio/portfolio9-mb@2x.jpg 2x
+                      " />
+                    <img
+                      class="pics-style"
+                      src="./image/portfolio/portfolio9-mb.jpg"
+                      alt="Ноутбук з открытим приложением"
+                  /></picture>
                   <div class="portfolio-link__overlay">
                     <p class="text-style">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -426,5 +853,12 @@
         </div>
       </div>
     </footer>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
